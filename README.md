@@ -77,3 +77,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]
 ```
+
+****
+Yarn build then copy everything in build folder to your server.
+***
