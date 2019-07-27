@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/19554935/61598007-644ae080-abe5-11e9-9bf1-36082107d00c.png)
+![Alt Text](https://github.com/ofuen/react-apache/blob/master/img/2019-07-21_18-29-54.gif)
 ***
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,5 +68,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+***
 
+* create a .htaccess
+```.htacess
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+```
 
+****
+Yarn build then copy everything in build folder to your server.
+***
