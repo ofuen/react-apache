@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { Fabric } from 'office-ui-fabric-react/lib/Fabric'
+import { Button, ButtonType } from 'office-ui-fabric-react/lib/Button'
+import { Dialog, DialogType, DialogFooter } from 'office-ui-fabric-react/lib/Dialog'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isOpen: false,
+    }
+  }
+
+  open = () => this.setState({isOpen: true})
+
+  close = () => this.setState({isOpen: false})
+
+  render() {
+    return (
+      <Fabric className="App">
+      <div style={{margin: '5em'}}>
+      <Button onClick={this.open}>I am a button</Button>
+      </div>
+      <Dialog
+      isOpen={this.state.isOpen}
+      type={DialogType.close}
+      onDismiss={this.close.bind(this)}
+      title='Dialog title'
+      subText='Dialog subText'
+      isBlocking={false}
+      closeButtonAriaLabel='Close'
+      >
+      <h1>Hello, World!</h1>
+      <DialogFooter>
+      <Button buttonType={ButtonType.primary} onClick={this.close}>OK</Button>
+      </DialogFooter>
+      </Dialog>
+      </Fabric>
+    )
+  }
 }
 
 export default App;
