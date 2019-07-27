@@ -25,8 +25,8 @@ class App extends Component {
       isOpen={this.state.isOpen}
       type={DialogType.close}
       onDismiss={this.close.bind(this)}
-      title='Dialog title'
-      subText='Dialog subText'
+      title='Office UI Fabric'
+      subText='7.17.0'
       isBlocking={false}
       closeButtonAriaLabel='Close'
       >
