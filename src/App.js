@@ -26,7 +26,7 @@ class App extends Component {
       type={DialogType.close}
       onDismiss={this.close.bind(this)}
       title='Office UI Fabric'
-      subText='7.17.0'
+      subText='^7.28.2'
       isBlocking={false}
       closeButtonAriaLabel='Close'
       >
