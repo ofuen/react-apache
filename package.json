@@ -9,7 +9,7 @@
     "lodash": "^4.17.20",
     "lodash.template": "^4.5.0",
     "mixin-deep": "^2.0.1",
-    "office-ui-fabric-react": "^7.28.2",
+    "office-ui-fabric-react": "^7.128.1",
     "react": "^17.0.0-rc.0",
     "react-dom": "^17.0.0-rc.0",
     "react-scripts": "3.0.1",
